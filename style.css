@@ -1,0 +1,679 @@
+/* GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    list-style: none;
+}
+
+ul {
+    list-style: none;
+}
+
+span {
+    color: #ECA50E;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    border-radius: 4px;
+
+}
+
+.container {
+    max-width: 1200px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* HEADER */
+.header-bg {
+    background-color: #000;
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-menu {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+
+}
+
+.header-menu a {
+    padding: 16px 0;
+    color: #fff;
+    font-weight: 500;
+    display: inline-block;
+    font-size: 18px;
+    position: relative;
+}
+
+.header-menu a:after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0px;
+    background-color: #ECA50E;
+    margin-top: 4px;
+    transition: 0.3s;
+    position: absolute;
+}
+
+.header-menu a:hover:after {
+    width: 100%;
+}
+
+@media (max-width:800px) {
+    .header-menu a {
+        background-color: #1b1b1b;
+        padding: 12px 16px;
+        border-radius: 4px;
+    }
+
+    .header-menu {
+        gap: 20px;
+    }
+
+    .header-menu a:hover {
+        background-color: #383737;
+    }
+
+    .header-menu a:after {
+        display: none;
+    }
+}
+
+@media (max-width:600px) {
+
+    .header-menu {
+        gap: 12px;
+
+    }
+
+    .header-menu a {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+/* MAIN  INTRODUÇÃO */
+
+.introducao-bg {
+    background-color: #000;
+    color: #fff;
+    box-shadow: inset 0 -120px white;
+}
+
+.introducao {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0px 40px;
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.intruducao-conteudo {
+    align-self: end;
+    padding-bottom: 200px;
+    max-width: 1200px;
+
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.introducao h1 {
+    margin-bottom: 32px;
+    font-size: 60px;
+    line-height: 1.125;
+}
+
+.introducao p {
+    margin-bottom: 30px;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #b2b2b2;
+}
+
+.intruducao-conteudo a {
+    color: #1b1b1b;
+    background-color: #ECA50E;
+    padding: 16px 32px;
+    font-weight: bolder;
+    border-radius: 4px;
+}
+
+.introducao img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.introducao-image {
+    margin-bottom: -120px;
+}
+
+@media (max-width:1200px) {
+    .introducao {
+        padding-left: 3%;
+    }
+
+    .introducao h1 {
+        font-size: 48px;
+    }
+
+    .introducao p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width:800px) {
+    .introducao {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .introducao-bg {
+        background-color: #1b1b1b;
+        padding-top: 40px;
+        box-shadow: inset 0 -60px white;
+    }
+
+    .intruducao-conteudo {
+        padding-bottom: 0px;
+    }
+
+    .introducao h1 {
+        font-size: 32px;
+    }
+
+    .introducao img {
+        width: 98%;
+        height: 300px;
+    }
+
+}
+
+/* Lista de bicicletas */
+.bicicletas-lista {
+    padding-top: 60px;
+    padding-bottom: 120px;
+}
+
+.bicicletas-lista h2 {
+    margin-bottom: 40px;
+    font-size: 52px;
+    max-width: 1200px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bicicletas-lista ul {
+    display: flex;
+    gap: 40px;
+    padding: 0 20px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bicicletas-lista h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.bicicletas-lista h3::before {
+    content: '';
+    background-color: #ECA50E;
+    height: 8px;
+    width: 12px;
+    display: inline-block;
+    margin-right: 5px;
+    transition: 500ms;
+}
+
+.bicicletas-lista h4 {
+    font-size: 18px;
+    color: #808080;
+    font-weight: 500;
+}
+
+.bicicletas-lista li h4 {
+    padding-left: 20px;
+}
+
+.bicicletas-lista a:hover h3::before {
+    width: 24px;
+}
+
+.bicicletas-lista li a img {
+    transition: 500ms;
+}
+
+.bicicletas-lista li a img:hover {
+    transform: scale(1.02);
+}
+
+@media (max-width:800px) {
+    .bicicletas-lista ul {
+        flex-direction: column;
+    }
+
+    .bicicletas-lista h2 {
+        font-size: 35px;
+    }
+}
+
+/* TECNOLOGIA BG */
+
+.tecnologia-bg {
+    background-color: #111111;
+    box-shadow: inset 0 80px #fff, inset 0 -80px #fff;
+}
+
+.tecnologia {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.tecnologia-conteudo {
+    padding-top: 120px;
+}
+
+.tecnologia-conteudo h3.text-grey {
+    margin-bottom: 20px;
+    color: #b2b2b2;
+    font-size: 26px;
+    font-weight: 400;
+    width: max-content;
+}
+
+.tecnologia-conteudo h2 {
+    color: #fff;
+    font-size: 60px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.tecnologia-conteudo>p {
+    color: #b2b2b2;
+    font-size: 19px;
+    margin-bottom: 20px;
+
+}
+
+.tecnologia-conteudo a {
+    color: #ECA50E;
+    margin-bottom: 50px;
+    display: inline-block;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #ECA50E;
+    letter-spacing: 3px;
+    font-size: 20px;
+}
+
+.tecnologia-conteudo a:hover {
+    color: #fff;
+    border-bottom: 3px solid #fff;
+}
+
+.tecnologia .color-white {
+    color: #fff;
+}
+
+.tecnologia-vantagem {
+    display: flex;
+    gap: 40px;
+}
+
+.tecnologia-vantagem h3 {
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 7px;
+}
+
+.tecnologia-vantagem p {
+    color: #b2b2b2;
+
+}
+
+@media (max-width:800px) {
+
+    .tecnologia {
+        grid-template-columns: 1fr;
+    }
+
+    .tecnologia-bg {
+        box-shadow: initial;
+    }
+
+    .tecnologia-conteudo h3.text-grey {
+        font-size: 17px;
+    }
+
+    .tecnologia-conteudo h2 {
+        font-size: 40px;
+    }
+
+    .tecnologia-conteudo {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .tecnologia-conteudo a {
+        font-size: 14px;
+    }
+
+    .tecnologia-vantagem {
+        flex-direction: column;
+    }
+
+    .tecnologia-imagem {
+        display: none;
+    }
+
+}
+
+
+
+/* NOSSOS PARCEIROS */
+
+.parceiros {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.parceiros h2 {
+    margin-bottom: 60px;
+    font-size: 52px;
+
+}
+
+.parceiros ul {
+    max-width: 1400px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.parceiros li {
+    display: flex;
+    padding: 32px;
+    border: 1px solid #dbd9d9;
+
+}
+
+li.border-none {
+    border-bottom: none;
+
+}
+
+li.top {
+    border-top: none;
+}
+
+li.none1 {
+    border-left: none;
+}
+
+li.none4 {
+    border-right: none;
+}
+
+.parceiros img {
+    margin: auto;
+}
+
+@media (max-width:800px) {
+    .parceiros h2 {
+        font-size: 35px;
+
+    }
+
+    .parceiros ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .parceiros li {
+        border: none;
+
+    }
+}
+
+/* DEPOIMENTO */
+.depoimentos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFBB00;
+    margin-top: 60px;
+}
+
+.depoimentos p {
+    font-size: 37px;
+    font-weight: 900;
+    font-family: 'Merriweather', serif;
+    color: #4b3c0b;
+    max-width: 32ch;
+    position: relative;
+
+}
+
+.depoimentos img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.depoimento-img {
+    flex: 1;
+}
+
+.depoimento-conteudo {
+    flex: 1;
+    padding: 40px 40px 80px 80px;
+    align-self: end;
+}
+
+.depoimento-conteudo h4 {
+    text-align: right;
+    font-family: 'Merriweather', serif;
+}
+
+.depoimentos p::before {
+    content: " “ ";
+    font-size: 5rem;
+    position: absolute;
+    left: -50px;
+    top: -20px;
+    color: #db9f05;
+}
+
+.depoimentos p::after {
+    content: " ” ";
+    font-size: 5rem;
+    position: absolute;
+
+    color: #db9f05;
+}
+
+
+@media (max-width:1109px) {
+    .depoimentos {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width:800px) {
+    .depoimentos p {
+        font-size: 26px;
+    }
+
+    .depoimento-conteudo h4 {
+        margin-top: 59px;
+    }
+}
+
+/* SEGUROS */
+
+.seguros-bg {
+    background-color: #111111;
+}
+
+.seguros {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.seguros h2 {
+    color: #fff;
+    font-size: 52px;
+    font-weight: 500;
+    grid-column: 1/-1;
+}
+
+.seguro-item {
+    color: white;
+    background-color: #000;
+    padding: 32px 32px 32px 60px;
+}
+
+.seguro-item .seguro-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 29px;
+}
+
+.seguro-item .color-prata {
+    color: #808080;
+
+
+}
+
+.seguro-item h4 {
+    font-size: 30px;
+    font-weight: 600;
+
+}
+
+.seguro-item li {
+    margin-bottom: 30px;
+}
+
+.seguro-item h3.color-prata {
+    font-size: 39px;
+
+}
+
+.seguro-item span.color-prata {
+    font-size: 15px;
+    font-weight: 400;
+
+}
+
+.seguro-item a.btn-prata {
+    color: #fff;
+    background-color: #383737;
+
+    padding: 16px 50px;
+
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+
+.seguro-item a.btn-ouro {
+    color: #fff;
+    background-color: #db9f05;
+
+    padding: 16px 50px;
+    display: inline-block;
+    margin-top: 20px;
+    border-radius: 4px;
+}
+
+.seguro-item .color-ouro {
+    color: #db9f05;
+    font-size: 39px;
+}
+
+.seguro-item  li img{
+     display: inline ;
+}
+
+
+@media (max-width:800px) {
+    .seguros {
+        grid-template-columns: 1fr;
+    }
+    .seguro-item .seguro-flex{
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+    .seguro-item h3.color-prata {
+        font-size: 23px;
+
+    }
+
+    .seguro-item .color-ouro {
+        font-size: 23px;
+    }
+
+    .seguro-item h4 {
+        font-size: 20px;
+        font-weight: 600;
+
+    }
+
+}
